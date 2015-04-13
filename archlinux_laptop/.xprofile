@@ -1,0 +1,4 @@
+compton -b &
+xrandr -s 1360x768
+#without shadow effects
+#compton -CGb

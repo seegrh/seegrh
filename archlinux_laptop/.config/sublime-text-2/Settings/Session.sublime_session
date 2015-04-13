@@ -1,0 +1,300 @@
+{
+	"folder_history":
+	[
+	],
+	"last_window_id": 1,
+	"settings":
+	{
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"buffers":
+			[
+				{
+					"contents": "",
+					"settings":
+					{
+						"buffer_size": 0,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"contents": "#scratch# Oh-My-Zsh\nZSH=~/.oh-my-zsh\nZSH_THEME=\"msjche\"    #kardan agnoster af-magic bira clean candy gentoo terminalparty\n \n# Lines configured by zsh-newuser-install\nHISTFILE=~/.histfile\nHISTSIZE=1000\nSAVEHIST=1000\n \n# Set to this to use case-sensitive completion\nCASE_SENSITIVE=\"true\"\n \n# Comment this out to disable bi-weekly auto-update checks\nDISABLE_AUTO_UPDATE=\"true\"\n \n# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)\n# export UPDATE_ZSH_DAYS=13\n \n# Uncomment following line if you want to disable colors in ls\n# DISABLE_LS_COLORS=\"true\"\n \n# Uncomment following line if you want to disable autosetting terminal title.\n# DISABLE_AUTO_TITLE=\"true\"\n \n# Uncomment following line if you want red dots to be displayed while waiting for completion\nCOMPLETION_WAITING_DOTS=\"true\"\n \n# Default Programs\n#export NMON=cmknt\nexport EDITOR=\"vim\"\nexport PAGER=\"less\"\nexport BROWSER=\"dwb\"\nexport MOVPLAY=\"vlc\"\nexport PICVIEW=\"feh\"\nexport SNDPLAY=\"mplayer\"\nexport TERMINAL=\"uxterm\"\n \n# File Extensions\nfor ext in html org php com net no;    do alias -s $ext=$BROWSER; done\nfor ext in txt tex py PKGBUID;        do alias -s $ext=$EDITOR; done\nfor ext in png jpg gif;            do alias -s $ext=$PICVIEW; done\nfor ext in mpg wmv avi mkv;        do alias -s $ext=$MOVPLAY; done\nfor ext in wav mp3 ogg;            do alias -s $ext=$SNDPLAY; done\n \n########################################################\n######################## ALIASES #######################\n########################################################\n \n## System\nalias shutdown='sudo shutdown -P now'\nalias Stat='uname -a;systemd-analyze time;wc -l /lib/modules/$(uname -r)/modules.order;lsinitcpio -a /boot/initramfs-linux.img'\nalias laptop-mode='grep -r '^\\(CONTROL\\|ENABLE\\)_' /etc/laptop-mode/conf.d'\nalias keys='xev'\nalias bub='say en beau is a bunkace'\nalias unblock-wireless='rfkill unblock all && ifconfig set wlp3s0 up'\n \n## DEs\nalias Gnome='sudo /home/msjche/Scripts/gnome.sh'\nalias Awesome='sudo /home/msjche/Scripts/awesome.sh'\n \n## Flash iso to usb drive\n#dd bs=4M if=/path/to/archlinux.iso of=/dev/sdb && sync\n \n## Work\nalias Maildownload='cp -r ~/Dropbox/.thunderbird ~'\nalias Mailupload='cp -r ~/.thunderbird ~/Dropbox/'\n \n## Fun\nalias aquarium='asciiquarium'\n \n## Bitcoin\nalias bc='btc'\n \n## Games\nalias sudoku='nsudoku'\nalias tetris='bastet'\nalias mario='mupen64plus --windowed ~/ROMs/N64/SuperMario64.v64'\nalias kart='mupen64plus --windowed ~/ROMs/N64/MarioKart64.v64'\nalias zelda='mupen64plus --windowed ~/ROMs/N64/Zelda64.v64'\nalias zeldamajora='mupen64plus --windowed ~/ROMs/N64/ZeldaMajorasMask.z64'\nalias ps2='pcsx2'\n \n## Packages\nalias extract='dtrx'\nalias gz='tar -xzf'\nalias xz='tar -xJf'\nalias bz='tar -xvjf'\n \n## Pacman\nalias UU='packer-color -Syyu'\nalias UUA='yaourt -Syyua --devel'\nalias P='packer-color'\nalias PI='packer-color -S'\nalias Y='yaourt'\nalias pac='sudo pacman -S'\nalias pac-r='sudo pacman -R'\nalias Log='tail -f /var/log/pacman.log'\n \n## Awesome\nalias eA='cd ~/.config/awesome && vim rc.lua'\nalias cdA='cd ~/.config/awesome'\nalias eTH='cd ~/.config/awesome/themes/holo && vim theme.lua'\nalias eTP='cd ~/.config/awesome/themes/powerarrow-darker && vim theme.lua'\nalias BG='~/Scripts/background.sh'\n \n## Theming\nalias HO='~/Scripts/Theming/holo.sh'\nalias PAD='~/Scripts/Theming/powerarrow-darker.sh'\nalias PAF='~/Scripts/Theming/powerarrowf.sh'\n \n## Tmux\nalias eT='vim ~/.tmux.conf'\n \n## Geeknote\nalias geek-new='~/Scripts/geeknote/geeknote-new-note.sh'\n \n## Directories\nalias space='ncdu'\nalias space-color='cdu'\nalias ll='ls -l'\nalias la='ls -ltra'\nalias l='ls'\nalias C='clear'\nalias se='sudo vim'\nalias e='vim'\nalias home='cd ~'\nalias ..='cd ..'\nalias ...='cd ...'\nalias ....='cd ....'\nalias .....='cd .....'\nalias k='exit'\nalias te='trash-empty'\nalias tl='trash-list'\nalias del='trash-put'\nalias tr='trash-rm'\nalias lsTrash='ls ~/.local/share/Trash/files/'\nalias cdTrash='cd ~/.local/share/Trash/files/'\nalias lD='ls ~/Downloads'\nalias D='cd ~/Downloads'\n \n## YouTube\nalias yt='cd ~/Downloads/YouTube'\nalias cleanYT='rm ~/Downloads/YouTube/*.*'\nalias DL='cd ~/Downloads/YouTube && youtube-dl -ic'\n \n## X Resources Stuff\nalias eX='vim ~/.Xresources'\nalias XTR='xrdb -merge ~/.Xresources'\n \n## Zsh Stuff\nalias eZ='vim ~/.zshrc'\nalias eZG='leafpad ~/.zshrc'\nalias eOMZ='vim ~/.oh-my-zsh/themes/msjche.zsh-theme'\nalias Z='source ~/.zshrc'\n \n## Vim Stuff\nalias eV='vim ~/.vimrc'\nalias e='vim'\n \n## Rip CDs\nalias CDinfo='cdparanoia -vsQ'\nalias rip='cdparanoia -B'\nalias mp3='for t in track{01-14}*.wav; do lame -b 320 $t; done'\n \n## Scripts\nalias colordump='~/Scripts/colordump.sh'\nalias activate='chmod 755'\nalias top100='/home/msjche/Scripts/top100.sh'\nalias time_international='/home/msjche/Scripts/time_international.sh'\nalias natgeo='/home/msjche/Scripts/natgeo.sh'\nalias ballz='python /home/msjche/Scripts/Games/Ballz.py'\nalias tpbs='clear && figlet -c TPB Search && ~/Scripts/tpb.sh'\nalias convertMTS='~/Scripts/convertMTS.sh'\nalias convertOGV='mencoder out.ogv -ovc lavc -oac mp3lame -o screencast.avi'\n \n## Transmission\nalias IP-update='~/Scripts/blocklist.sh'\nalias tsm-check='dwb http://localhost:9091/transmission/web'\nalias t='transmission-daemon && transmission-remote-cli'\nalias kT='killall transmission-daemon'\n \n## News and Music\nalias MP='ncmpcpp'\nalias news='newsbeuter'\nalias nix='cortex linux'\nalias pods='podbeuter'\nalias twit='turses'\nalias Pods='cd ~/Podcasts && ranger'\nalias music='sh ~/Scripts/music.sh & '\n \n## Multimedia\nalias irc='weechat-curses'\nalias M='mplayer -vo x11 -fs -zoom'\nalias Vids='cd ~/Downloads/.blackbox && ranger'\n \n## Google Calenar\nalias gcal-week='gcalcli --width 12 calw'\nalias gcal='gcalcli --width 12 calm'\nalias gcal-add='gcalcli quick'\nalias gcal-agenda='gcalcli agenda'\n \n## Peer Guardian\nalias pgl-update='pglcmd update'\nalias pgl-start='pglcmd restart'\nalias pgl-status='pglcmd status'\nalias pgl-dump='pglcmd stats'\nalias pgl-test='pglcmd test'\nalias pgl-stop='pglcmd stop'\n \n## w3m\nalias web='cd ~/Podcasts && w3m -cookie www.google.com'\n \n## Check Screencast\nalias FF-check-raw='mplayer ~/Screencasts/screencast.avi'\nalias FF-check-final='mplayer ~/Screencasts/screencast.mp4'\n \n## Net\nalias WW='wicd-curses'\nalias hogs='sudo nethogs wlp3s0'\nalias net-driftnet='echo \"see pics from other computers on network\" && sudo driftnet -i wlp3s0'\nalias net-ettercap='echo \"set up interface to capture network data\" && sudo ettercap -TQM arp -i wlp3s0 //'\nalias net-urlsnarf='echo \"see which websites others on network are visiting\" && sudo urlsnarf -i wlp3s0 |cut -d\\\" -f4'\nalias net-scan='sudo arp-scan -l -I wlp3s0'\nalias net-stat='netstat -t -v -c -ee'\nalias net-traf='sudo iptraf-ng'\nalias net-bmon='bmon'\nalias net-dump='sudo tcpdump -i wlp3s0'\nalias net-wifi='wavemon'\nalias net-nmon='nmon'\nalias net-speedtest='speedtest-cli'\nalias iftop='sudo iftop -p -n'\nalias slurm='slurm -i wlp3s0'\n \n## Power\nalias bat='acpi'\nalias bat-all='acpi -V'\nalias power='powertop'\n \n## Misc\nalias biguns='~/Scripts/biguns.sh'\nalias flux='xflux -z 94596'\nalias X='xscreensaver &'\nalias kX='pkill xscreensaver'\nalias kF='pkill xflux'\nalias pic='tiv'\nalias clock='tty-clock -c -C 4'\nalias clock-graph='clockywock'\nalias date-time='watch -n 1 -t date'\nalias stopwatch='echo \"cntl-z to end\" & time cat'\nalias starwars='telnet towel.blinkenlights.nl'\nalias info='inxi -F'\nalias cap='cd ~/Screencasts/screenshots && scrot -d 4'\nalias rip='abcde'\nalias vidterm='mplayer -vo caca'\nalias graph='gnuplot'\n \n## Sparklines - CLI visualizations\nalias spark-earthquake='curl http://earthquake.usgs.gov/earthquakes/catalogs/eqs1day-M1.txt --silent | sed '1d' | cut -d, -f9 | sparklines'\nalias spark-wifi='~/Scripts/wifi.sh'\n \n###########################################################\n########################### ZSH ###########################\n###########################################################\n \n# enable vim mode on commmand line\nbindkey -v\n \n# no delay entering normal mode\n# https://coderwall.com/p/h63etq\n# https://github.com/pda/dotzsh/blob/master/keyboard.zsh#L10\n# 10ms for key sequences\nKEYTIMEOUT=1\n \n# show vim status\n# http://zshwiki.org/home/examples/zlewidgets\nfunction zle-line-init zle-keymap-select {\n    RPS1=\"${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}\"\n    RPS2=$RPS1\n    zle reset-prompt\n}\nzle -N zle-line-init\nzle -N zle-keymap-select\n \n# add missing vim hotkeys\n# fixes backspace deletion issues\n# http://zshwiki.org/home/zle/vi-mode\nbindkey -a u undo\nbindkey -a '^R' redo\nbindkey '^?' backward-delete-char\nbindkey '^H' backward-delete-char\n \n# history search in vim mode\n# http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore\nbindkey -M viins '^s' history-incremental-search-backward\nbindkey -M vicmd '^s' history-incremental-search-backward\n \n###########################################################\n######################## FUNCTIONS ########################\n###########################################################\n \n# Best of YouTube\nbestofyoutube() { cd ~/Downloads/YouTube && ~/Scripts/bestofyoutube.sh  }\n \n \n# Simple python HTTP server\nserver() { python3 -m http.server ;}\n \n# Hacker top\nhacker-top() { python ~/Scripts/hacker-top/hacker_top.py  ;}\n \n# Reddit top\nreddit-top() { python ~/git/reddit-top/reddit_top ;}\n \n# Transmission\nT() { ~/Scripts/blocklist.sh && transmission-daemon && sleep 3 && transmission-remote-cli ;}\n \n# Pirate Bay search\ntpb() { clear && figlet -c Pirate Bay && ~/Scripts/tpb.sh ;}\n \n# Torrentz.eu search\ntorrentzeu() { clear && figlet -c Torrentz EU && ~/Scripts/torrentzeu.sh ;}\n \n# YouTube Viewer\nyt-viewer() { clear && figlet -c YouTube Viewer && youtube-viewer ;}\n \n# No video / music only\n \nyt-listen() { clear && figlet -c YouTube Listen && youtube-viewer -n $@ ;}\n \n# Pianobar - ncurses Pandora Radio client\npandora-cli() { clear && figlet -c Pandora CLI && pianobar ;}\n \n# PMS- ncurses Spotify client\nspotify-cli() { clear && cd ~/Music && figlet -c Spotify CLI && python3 ~/Scripts/pms/pms.py ;}\n \n# Grooveshark CLI\ngroove-dl-cli() { cd grooveshark && clear && figlet -c Grooveshark && groove-dl ;}\n \n## Vim help page\n:h()  { vim +\":h $1\" +'wincmd o' +'nnoremap q :q!<CR>' ;}\n \n## Command-line calculator\ncalc() { python -ic \"from __future__ import division; from math import *; from random import *\" ;}\n \n## Commandline Fu\ncmdfu() { curl \"http://www.commandlinefu.com/commands/matching/$(echo \"$@\" \\\n        | sed 's/ /-/g')/$(echo -n $@ | base64)/plaintext\" ;}\n \n##Check if websites are down\ndown4me() { curl -s \"http://www.downforeveryoneorjustme.com/$1\" | sed '/just you/!d;s/<[^>]*>//g';}\n \n###########################################################\n######################## WIRELESS #########################\n###########################################################\n \n# Check if mon0 is up: ifconfig\n# airmon-ng\n \n#====================================================================================\n \n#airodump-ng --bssid \"BSSIDTargetNetwork\" -w my_wpa -c \"ChannelTarget\" mon0\nAD() { cd /home/msjche/Wireless/active && airodump-ng wlp3s0 ;}\n \n# Read:\n#BSSID:                 08:86:3B:DF:05:06\n#ESSID:                 Smith network1_xt\n#Channel:               9\n#Interface:             mon0\n \n#====================================================================================\n \n#airodump-ng --bssid \"BSSIDTargetNetwork\" -w my_wpa -c \"ChannelTarget\" mon0\nADB() { cd /home/msjche/Wireless/active && rm my_wpa* && airodump-ng --bssid \"$1\" -w my_wpa -c \"$2\" wlp3s0 ;}\n \n# Read:\n#Their MAC Address: 2C:B0:5D:CB:6F:3F\n#Their Station:         38:AA:3C:5F:C9:1D\n \n#====================================================================================\n \n# Get salted hash\n \n#aireplay-ng -0 -o 15 channel -a \"BSSIDTargetNetwork\" -c \"TheirStationMAC\" mon0\nAR() { cd /home/msjche/Wireless/active && aireplay-ng -0 15 -a \"$1\" -c \"$2\" wlp3s0 ;}\n \n#====================================================================================\n# now crack\n# IMPORTANT - Must run AR() while running this!!\n#aircrack-ng -e \"ESSIDinQuotes\" -w \"PathToWordList\" \"PathToX.capFromAirodump\"\nAC() { md /home/msjche/Wireless/active && aircrack-ng -e \"$1\" -w /home/msjche/Wireless/WordListCollection/oCustom-WPA.txt /home/msjche/Wireless/active/my_wpa-01.cap ;}\n \n \n###########################################################\n###################### TRANSMISSION #######################\n###########################################################\n \ntsm-clearcompleted() {\n        transmission-remote -l | grep 100% | grep Done | \\\n        awk '{print $1}' | xargs -n 1 -I % transmission-remote -t % -r ;}\ntsm() { transmission-remote --list ;}\ntsm-start() { transmission-daemon ;}\ntsm-stop() { pkill tramsmission-daemon ;}\ntsm-altspeedenable() { transmission-remote --alt-speed ;}\ntsm-altspeeddisable() { transmission-remote --no-alt-speed ;}\ntsm-add() { transmission-remote --add \"$1\" ;}\ntsm-askmorepeers() { transmission-remote -t\"$1\" --reannounce ;}\ntsm-pause() { transmission-remote -t\"$1\" --stop ;}\ntsm-start-torrent() { transmission-remote -t\"$1\" --start ;}\ntsm-purge() { transmission-remote -t\"$1\" --remove-and-delete ;} # will delete data also\ntsm-remove() { transmission-remote -t\"$1\" --remove ;} # does not delete data\ntsm-info() { transmission-remote -t\"$1\" --info ;}\ntsm-speed() { while true;do clear; transmission-remote -t\"$1\" -i | grep Speed;sleep 1;done ;}\n \n###########################################################\n######################### FFMPEG ##########################\n###########################################################\n \nffx_MONO=\"1\"            # mono\nffx_DUAL=\"2\"            # dual channel\nffx_HW=\"hw:1,0\"         # alsa; run 'cat /proc/asound/pcm' to change to the correct numbers\nffx_PULSE=\"pulse\"       # pulseaudio; might have to install pavucontrol to change volume\nffx_FPS=\"30\"            # frame per seconds\nffx_WIN_FULL=\"1920x1080\"        # record fullscreen\nffx_AUDIO=\"pcm_s16le\"   # audio codec\nffx_VIDEO=\"libx264\"     # video codec\nffx_PRESET=\"ultrafast\"  # preset error? run 'x264 -h' replace with fast,superfast, slow ..etc\nffx_CRF=\"0\"\nffx_THREADS=\"0\"\nffx_SCALE=\"scale=1920x1080\"     # scale resolution, no black bars on sides of video on youtube\nffx_OUTPUT=~/Screencasts/screencast.avi\nffx_OUTPUT_FINAL=~/Screencasts/screencast.mp4\n# Note: -vf is optional delete if you want, -y is to overwrite existing file\n \n## Concatinate (combine) two or more videos\n#ffmpeg -i \"concat:input1.avi|input2.avi...\" -c copy output.avi\n \nFF-full() {\n        ffmpeg \\\n        -f alsa \\\n        -ac $ffx_MONO \\\n        -i $ffx_PULSE \\\n        -f x11grab \\\n        -r $ffx_FPS \\\n        -s $ffx_WIN_FULL \\\n        -s 1920x1080 \\\n        -i :0.0 \\\n        -acodec $ffx_AUDIO \\\n        -vcodec $ffx_VIDEO \\\n        -preset $ffx_PRESET \\\n        -crf $ffx_CRF \\\n:        -threads $ffx_THREADS \\\n        -vf $ffx_SCALE \\\n        -y $ffx_OUTPUT \\\n        }\n \n# capture single window, use mouse cursor to select window you want to record\nFF-window() {\n        ffx_INFO=$(xwininfo -frame)\n    ffmpeg \\\n    -f alsa \\\n    -ac $ffx_MONO \\\n        -i $ffx_PULSE \\\n    -f x11grab \\\n    -r $ffx_FPS \\\n        -s $(echo $ffx_INFO \\\n    | grep -oEe 'geometry [0-9]+x[0-9]+'\\\n        | grep -oEe '[0-9]+x[0-9]+') \\\n        -i :0.0+$(echo $ffx_INFO | grep \\\n    -oEe 'Corners:\\s+\\+[0-9]+\\+[0-9]+' \\\n        | grep -oEe '[0-9]+\\+[0-9]+' | sed \\\n    -e 's/\\+/,/' ) \\\n        -acodec $ffx_AUDIO \\\n    -vcodec $ffx_VIDEO \\\n    -preset $ffx_PRESET \\\n    -crf $ffx_CRF \\\n    -threads $ffx_THREADS \\\n        -y $ffx_OUTPUT \\\n            }\n \nFF-convert() {\n    ffmpeg \\\n        -i $1 \\\n        -ar 22050 \\\n        -ab 32k \\\n        -strict -2 \\\n         $ffx_OUTPUT_FINAL\n        }\n \nConvert2mp4() {\n    ffmpeg \\\n        -i $1 \\\n        -ar 22050 \\\n        -ab 32k \\\n        -strict -2 \\\n         output.mpeg\n        }\n \n \n \n## Check Internal and External IPs ##\nmy-ip() {\n        echo \"--------------- Network Information ---------------\"\n        # newer system like arch\n        #ip addr | awk '/global/ {print $1,$2}' | cut -d\\/ -f1\n        #ip addr | awk '/global/ {print $3,$4}'\n        #ip addr | awk '/ether/ {print $1,$2}'\n        #ip addr | awk '/scope link/ {print $1,$2}' | cut -d\\/ -f1\n        # older system like debian\n    ifconfig | awk '/inet addr/ {print $1,$2}' | awk -F: '{print $1,$2}'\n    ifconfig | awk '/Bcast/ {print $3}' | awk -F: '{print $1,$2}'\n    ifconfig | awk '/inet addr/ {print $4}' | awk -F: '{print $1,$2}'\n    ifconfig | awk '/HWaddr/ {print $4,$5}'\n    ifconfig | awk '/Scope:Link/ {print $1,$3}' | cut -d\\/ -f1\n    echo Current IP $(curl -s http://checkip.dyndns.org/ | grep -o \"[[:digit:].]\\+\")\n    echo \"---------------------------------------------------\"\n}\n \n## Google Translate Functions ##\nsay() {\n \n        mplayer -user-agent Mozilla \\\n        \"http://translate.google.com/translate_tts?ie=UTF-8&tl=\"$1\"&q=$(echo \"$@\" \\\n        | cut -d ' ' -f2- | sed 's/ /\\+/g')\" > /dev/null 2>&1 ;}\n \nsay-translation() {\n \n        lang=$1\n        trans=$(translate {=$lang} \"$(echo \"$@\" | cut -d ' ' -f2- | sed 's/ /\\+/g')\" ) \n        echo $trans\n        mplayer -user-agent Mozilla \\\n        \"http://translate.google.com/translate_tts?ie=UTF-8&tl=$lang&q=$trans\" > /dev/null 2>&1 ;}\n \n##############################################################\n########################## PODCASTS ##########################\n##############################################################\n \nnvlc-podcast() { nvlc --no-color -S podcast --podcast-urls \"$@\" ;}\npods-LinuxActionShow() { nvlc-podcast \"http://feeds.feedburner.com/computeractionshowvideo\" ;}\npods-Unfiltered() { nvlc-podcast \"http://www.jupiterbroadcasting.com/feeds/unfilterHD.xml\" ;}\npods-Scibyte() { nvlc-podcast \"http://feeds.feedburner.com/scibytelarge \" ;}\npods-RonPaul() { nvlc-podcast \"https://www.google.com/url?q=http://www.ronpaul2012podcast.com/feed/&sa=U&ei=h8NIUbzfJoXJiQL4uoCoDw&ved=0CDYQFjAI&sig2=N2y3rxIlKxYDRI-Z9U8yRw&usg=AFQjCNGmGih9EAkV2JfSw2Nj64V90Jk5qg\" ;}\npods-StefanMolyneux() { nvlc-podcast \"http://feeds.feedburner.com/FreedomainRadioVolume6\" ;}\npods-JoeRoganExperience() { nvlc-podcast \"htthttp://joeroganexp.joerogan.libsynpro.com/irssp://joeroganexp.joerogan.libsynpro.com/irss\" ;}\npods-FreedomFeens() { nvlc-podcast \"http://www.freedomfeens.com/feed/\" ;}\npods-GoldMoneyVideos() { nvlc-podcast \"http://feeds.feedburner.com/GoldmoneyRssFeedGoldVideos\" ;}\npods-GoldMoneyPodcasts() { nvlc-podcast \"http://feeds.feedburner.com/GoldmoneyFoundationPodcasts\" ;}\n#pod-() { nvlc-podcast \"\" ;}\n \n##############################################################\n######################## LIVE STREAMS ########################\n##############################################################\n \nTV-m() { livestreamer -p mplayer \"$1\" best ;}\nTV-v() { livestreamer -p vlc \"$1\" best ;}\n \n# News\nlive-news-cnn() { livestreamer -p mplayer http://www.justin.tv/msnbc_live_stream_cnn#/w/5008673600 live ;}\nlive-news-cnn_international() { livestreamer -p mplayer http://www.justin.tv/rentadrone_cnbc#/w/5011049360/22 live ;}\nlive-news-cbs() { livestreamer -p mplayer http://www.ustream.tv/cbsnews live ;}\nlive-news-fox() { livestreamer -p mplayer http://www.justin.tv/newswatch_2#/w/5013818384/5 live ;}\nlive-news-prisonplanet() { livestreamer -p mplayer http://www.ustream.tv/channel/alex-jones---infowars-com---prisonplanet-tv live ;}\nlive-news-KRON_San_Francisco() { livestreamer -p mplayer http://www.ustream.tv/kron4news best ;}\nlive-news-The_FED() { livestreamer -p mplayer http://www.ustream.tv/federalreserve live ;}  \n \n# Series\nlive-series-simpsons() { livestreamer -p mplayer http://www.justin.tv/arconai_244#/w/5013781232/19  live ;}\nlive-series-southpark() { livestreamer -p mplayer http://www.justin.tv/arconai_229#/w/5622202400/179  best ;}\nlive-series-survival() { livestreamer -p mplayer http://www.justin.tv/survivor101#/w/5531579536/12 best ;}\nlive-series-criminal_minds() { livestreamer -p mplayer http://www.justin.tv/lurking_in_the_dark17 live ;}\nlive-series-mythbusters() { livestreamer -p mplayer  best ;}\nlive-series-married_with_children() { livestreamer -p mplayer http://www.justin.tv/mwconjtv#/w/4992184096/88 live ;}\nlive-series-stargate_SG1() { livestreamer -p mplayer http://www.justin.tv/oldngr8#/w/5006964064/9 live ;}\nlive-series-that_70s_show() { livestreamer -p mplayer http://www.justin.tv/highspothorror128#/w/4994695216/102 live ;}\n \n# Science\nlive-science-the_universe() { livestreamer -p mplayer http://www.justin.tv/the_lost_continent#/w/5005014000/48 live ;}\n \n# Movies\n \n#live-movies-horror-2000_2013_HQ() { livestreamer -p mplayer http://www.justin.tv/horrorhq0010#/w/5074870864/20 live ;}\nlive-movies-horror4life() { livestreamer -p mplayer http://www.justin.tv/finn_horrorstfu51 live ;}\n#live-movies-horror-2() { livestreamer -p mplayer http://www.justin.tv/jags__movies04#/w/5008275648/4 live ;}\n \nlive-movies-new_releases-2010_2013() { livestreamer -p mplayer http://www.justin.tv/videoisnothere6 live ;}\n#live-movies-new_releases-2012_2013_HQ() { livestreamer -p mplayer http://www.justin.tv/movies_tv68#/w/5056426000/115 live ;}\nlive-movies-movies_2010_2013() { livestreamer -p mplayer http://www.justin.tv/gewinnen_duh_bringen live ;}\n \nlive-movies-general() { livestreamer -p mplayer http://www.justin.tv/420nomad554 live ;}\n#live-movies-general-movies_n_that() { livestreamer -p mplayer http://www.justin.tv/walterkronic#/w/5013245536/8 live ;}\n \n \n \n## Capture video streams\n \nsniff-begin() { sudo iptables -t nat -A OUTPUT -p tcp --dport 1935 -m owner \\! --uid-owner root -j REDIRECT ;}\nsniff-capture-rtmpsrv() { rtmpsrv ;}\nsniff-end() { sudo iptables -t nat -D OUTPUT -p tcp --dport 1935 -m owner \\! --uid-owner root -j REDIRECT ;}\n \n## Rtmpsrv Feeds (may need to add -v before -r)\n \n# Jupiter Broadcasting\nlive-JupiterBroadcasting() { vlc rtsp://videocdn-us.geocdn.scaleengine.net/jblive/live/jblive.stream }\n \n \n# Russia Today US\niptv-RT_US() { rtmpdump \\\n                -r \"rtmp://rt.fms-04.visionip.tv/live\" \\\n                -a \"live\" \\\n                -f \"LNX 11,2,202,270\" \\\n                -W \"http://rt.com/s/swf/player5.4.viral.swf\" \\\n                -p \"http://rt.com\" -y \"RT_US_2\" \\\n                | mplayer - ;}\n \n# Bloomberg\niptv-Bloomberg() { rtmpdump \\\n                -v \\\n                -r rtmp://cp116697.live.edgefcs.net:80/live/BnazlkNDpCIcD-QkfyZCQKlRiiFnVa5I_640_360_440@18679  \\\n                -W http://player.ooyala.com/cacheable/c78f866930724ffedfe8cf5349712569/player_v2.swf \\\n                -p http://tvpc.com \\\n                | mplayer - ;}\n \n# MSNBC\niptv-MSNBC() { rtmpdump \\\n                -v \\\n                -r \"rtmp://a.cdn.msnbclive.eu/edge\" \\\n                -y \"msnbc_live\" \\\n                -W \"http://msnbclive.eu/getswf.php?name=player.swf\" \\\n                -p \"http://www.rentadrone.tv/msnbc-live-rockinroosters/\" \\\n                | mplayer - ;}\n \n# Rueters\niptv-Rueters() {  rtmpdump \\\n                -r \"rtmp://media9.lsops.net/reuters/\" \\\n                -a \"reuters/\" -W \"http://reuters.cdn.livestation.com/flash/player/5.7/player.swf\" \\\n                -p \"http://reuters.livestation.com/demo\" \\\n                --live \\\n                -y \"reuters_rlsweba_en_veryhigh.sdp\" \\\n                | mplayer -;}\n \n##########################################################\n########################## MODS ##########################\n##########################################################\n \n \n \nplugins=(git archlinux vi-mode themes zsh-completions color-command)\nsource /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\nsource $ZSH/oh-my-zsh.sh\n \nclear && archey3\n",
+					"file": "/home/ether/Docs/zsh.rc.exemple",
+					"file_size": 23551,
+					"file_write_time": 1427020086000000,
+					"settings":
+					{
+						"buffer_size": 23552,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"contents": "--[[\n                                             \n     Powerarrow Darker Awesome WM config 2.0 \n     github.com/copycat-killer               \n                                             \n--]]\n\n-- {{{ Required libraries\nlocal gears     = require(\"gears\")\nlocal awful     = require(\"awful\")\nawful.rules     = require(\"awful.rules\")\n                  require(\"awful.autofocus\")\nlocal wibox     = require(\"wibox\")\nlocal beautiful = require(\"beautiful\")\nlocal naughty   = require(\"naughty\")\nlocal drop      = require(\"scratchdrop\")\nlocal lain      = require(\"lain\")\n-- }}}\n\n-- {{{ Error handling\nif awesome.startup_errors then\n    naughty.notify({ preset = naughty.config.presets.critical,\n                     title = \"Oops, there were errors during startup!\",\n                     text = awesome.startup_errors })\nend\n\ndo\n    local in_error = false\n    awesome.connect_signal(\"debug::error\", function (err)\n        if in_error then return end\n        in_error = true\n\n        naughty.notify({ preset = naughty.config.presets.critical,\n                         title = \"Oops, an error happened!\",\n                         text = err })\n        in_error = false\n    end)\nend\n-- }}}\n\n-- {{{ Autostart applications\nfunction run_once(cmd)\n  findme = cmd\n  firstspace = cmd:find(\" \")\n  if firstspace then\n     findme = cmd:sub(0, firstspace-1)\n  end\n  awful.util.spawn_with_shell(\"pgrep -u $USER -x \" .. findme .. \" > /dev/null || (\" .. cmd .. \")\")\nend\n\nrun_once(\"urxvtd\")\nrun_once(\"unclutter\")\n-- }}}\n\n-- {{{ Variable definitions\n-- localization\nos.setlocale(os.getenv(\"LANG\"))\n\n-- beautiful init\nbeautiful.init(os.getenv(\"HOME\") .. \"/.config/awesome/themes/powerarrow-darker/theme.l:w:q!cua\")\nbeautiful.init(os.getenv(\"\n\n\n-- common\nmodkey     = \"Mod4\"\naltkey     = \"Mod1\"\nterminal   = \"termite\"\neditor     = os.getenv(\"EDITOR\") or \"vim\"\neditor_cmd = terminal .. \" -e \" .. editor\n\n-- user defined\nbrowser    = \"dwb\"\nbrowser2   = \"iron\"\ngui_editor = \"gvim\"\ngraphics   = \"gimp\"\nmail       = terminal .. \" -e mutt \"\niptraf     = terminal .. \" -g 180x54-20+34 -e sudo iptraf-ng -i all \"\nmusicplr   = terminal .. \" -g 130x34-320+16 -e ncmpcpp \"\n\nlocal layouts = {\n    awful.layout.suit.floating,\n    awful.layout.suit.tile,\n    awful.layout.suit.tile.bottom,\n    awful.layout.suit.fair,\n    awful.layout.suit.fair.horizontal,\n}\n-- }}}\n\n-- {{{ Tags\ntags = {\n   names = { \"1\", \"2\", \"3\", \"4\", \"5\"},\n   layout = { layouts[1], layouts[2], layouts[3], layouts[1], layouts[4] }\n}\n\nfor s = 1, screen.count() do\n   tags[s] = awful.tag(tags.names, s, tags.layout)\nend\n-- }}}\n\n-- {{{ Wallpaper\nif beautiful.wallpaper then\n    for s = 1, screen.count() do\n        gears.wallpaper.maximized(beautiful.wallpaper, s, true)\n    end\nend\n-- }}}\n\n-- {{{ Menu\nmymainmenu = awful.menu.new({ items = require(\"menugen\").build_menu(),\n                              theme = { height = 16, width = 130 }})\n-- }}}\n\n-- {{{ Wibox\nmarkup = lain.util.markup\nseparators = lain.util.separators\n\n-- Textclock\nclockicon = wibox.widget.imagebox(beautiful.widget_clock)\nmytextclock = awful.widget.textclock(\" %a %d %b  %H:%M\")\n\n-- calendar\nlain.widgets.calendar:attach(mytextclock, { font_size = 10 })\n\n-- Mail IMAP check\nmailicon = wibox.widget.imagebox(beautiful.widget_mail)\nmailicon:buttons(awful.util.table.join(awful.button({ }, 1, function () awful.util.spawn(mail) end)))\n--[[ commented because it needs to be set before use\nmailwidget = lain.widgets.imap({\n    timeout  = 180,\n    server   = \"server\",\n    mail     = \"mail\",\n    password = \"keyring get mail\",\n    settings = function()\n        if mailcount > 0 then\n            widget:set_text(\" \" .. mailcount .. \" \")\n            mailicon:set_image(beautiful.widget_mail_on)\n        else\n            widget:set_text(\"\")\n            mailicon:set_image(beautiful.widget_mail)\n        end\n    end\n})\n]]\n\n-- MPD\nmpdicon = wibox.widget.imagebox(beautiful.widget_music)\nmpdicon:buttons(awful.util.table.join(awful.button({ }, 1, function () awful.util.spawn_with_shell(musicplr) end)))\nmpdwidget = lain.widgets.mpd({\n    settings = function()\n        if mpd_now.state == \"play\" then\n            artist = \" \" .. mpd_now.artist .. \" \"\n            title  = mpd_now.title  .. \" \"\n            mpdicon:set_image(beautiful.widget_music_on)\n        elseif mpd_now.state == \"pause\" then\n            artist = \" mpd \"\n            title  = \"paused \"\n        else\n            artist = \"\"\n            title  = \"\"\n            mpdicon:set_image(beautiful.widget_music)\n        end\n\n        widget:set_markup(markup(\"#EA6F81\", artist) .. title)\n    end\n})\n\n-- MEM\nmemicon = wibox.widget.imagebox(beautiful.widget_mem)\nmemwidget = lain.widgets.mem({\n    settings = function()\n        widget:set_text(\" \" .. mem_now.used .. \"MB \")\n    end\n})\n\n-- CPU\ncpuicon = wibox.widget.imagebox(beautiful.widget_cpu)\ncpuwidget = lain.widgets.cpu({\n    settings = function()\n        widget:set_text(\" \" .. cpu_now.usage .. \"% \")\n    end\n})\n\n-- Coretemp\ntempicon = wibox.widget.imagebox(beautiful.widget_temp)\ntempwidget = lain.widgets.temp({\n    settings = function()\n        widget:set_text(\" \" .. coretemp_now .. \"°C \")\n    end\n})\n\n-- / fs\nfsicon = wibox.widget.imagebox(beautiful.widget_hdd)\nfswidget = lain.widgets.fs({\n    settings  = function()\n        widget:set_text(\" \" .. fs_now.used .. \"% \")\n    end\n})\n\n-- Battery\nbaticon = wibox.widget.imagebox(beautiful.widget_battery)\nbatwidget = lain.widgets.bat({\n    settings = function()\n        if bat_now.perc == \"N/A\" then\n            widget:set_markup(\" AC \")\n            baticon:set_image(beautiful.widget_ac)\n            return\n        elseif tonumber(bat_now.perc) <= 5 then\n            baticon:set_image(beautiful.widget_battery_empty)\n        elseif tonumber(bat_now.perc) <= 15 then\n            baticon:set_image(beautiful.widget_battery_low)\n        else\n            baticon:set_image(beautiful.widget_battery)\n        end\n        widget:set_markup(\" \" .. bat_now.perc .. \"% \")\n    end\n})\n\n-- ALSA volume\nvolicon = wibox.widget.imagebox(beautiful.widget_vol)\nvolumewidget = lain.widgets.alsa({\n    settings = function()\n        if volume_now.status == \"off\" then\n            volicon:set_image(beautiful.widget_vol_mute)\n        elseif tonumber(volume_now.level) == 0 then\n            volicon:set_image(beautiful.widget_vol_no)\n        elseif tonumber(volume_now.level) <= 50 then\n            volicon:set_image(beautiful.widget_vol_low)\n        else\n            volicon:set_image(beautiful.widget_vol)\n        end\n\n        widget:set_text(\" \" .. volume_now.level .. \"% \")\n    end\n})\n\n-- Net\nneticon = wibox.widget.imagebox(beautiful.widget_net)\nneticon:buttons(awful.util.table.join(awful.button({ }, 1, function () awful.util.spawn_with_shell(iptraf) end)))\nnetwidget = lain.widgets.net({\n    settings = function()\n        widget:set_markup(markup(\"#7AC82E\", \" \" .. net_now.received)\n                          .. \" \" ..\n                          markup(\"#46A8C3\", \" \" .. net_now.sent .. \" \"))\n    end\n})\n\n-- Separators\nspr = wibox.widget.textbox(' ')\narrl = wibox.widget.imagebox()\narrl:set_image(beautiful.arrl)\narrl_dl = separators.arrow_left(beautiful.bg_focus, \"alpha\") \narrl_ld = separators.arrow_left(\"alpha\", beautiful.bg_focus) \n\n-- Create a wibox for each screen and add it\nmywibox = {}\nmypromptbox = {}\nmylayoutbox = {}\nmytaglist = {}\nmytaglist.buttons = awful.util.table.join(\n                    awful.button({ }, 1, awful.tag.viewonly),\n                    awful.button({ modkey }, 1, awful.client.movetotag),\n                    awful.button({ }, 3, awful.tag.viewtoggle),\n                    awful.button({ modkey }, 3, awful.client.toggletag),\n                    awful.button({ }, 4, function(t) awful.tag.viewnext(awful.tag.getscreen(t)) end),\n                    awful.button({ }, 5, function(t) awful.tag.viewprev(awful.tag.getscreen(t)) end)\n                    )\nmytasklist = {}\nmytasklist.buttons = awful.util.table.join(\n                     awful.button({ }, 1, function (c)\n                                              if c == client.focus then\n                                                  c.minimized = true\n                                              else\n                                                  -- Without this, the following\n                                                  -- :isvisible() makes no sense\n                                                  c.minimized = false\n                                                  if not c:isvisible() then\n                                                      awful.tag.viewonly(c:tags()[1])\n                                                  end\n                                                  -- This will also un-minimize\n                                                  -- the client, if needed\n                                                  client.focus = c\n                                                  c:raise()\n                                              end\n                                          end),\n                     awful.button({ }, 3, function ()\n                                              if instance then\n                                                  instance:hide()\n                                                  instance = nil\n                                              else\n                                                  instance = awful.menu.clients({ width=250 })\n                                              end\n                                          end),\n                     awful.button({ }, 4, function ()\n                                              awful.client.focus.byidx(1)\n                                              if client.focus then client.focus:raise() end\n                                          end),\n                     awful.button({ }, 5, function ()\n                                              awful.client.focus.byidx(-1)\n                                              if client.focus then client.focus:raise() end\n                                          end))\n\nfor s = 1, screen.count() do\n\n    -- Create a promptbox for each screen\n    mypromptbox[s] = awful.widget.prompt()\n\n    -- We need one layoutbox per screen.\n    mylayoutbox[s] = awful.widget.layoutbox(s)\n    mylayoutbox[s]:buttons(awful.util.table.join(\n                            awful.button({ }, 1, function () awful.layout.inc(layouts, 1) end),\n                            awful.button({ }, 3, function () awful.layout.inc(layouts, -1) end),\n                            awful.button({ }, 4, function () awful.layout.inc(layouts, 1) end),\n                            awful.button({ }, 5, function () awful.layout.inc(layouts, -1) end)))\n\n    -- Create a taglist widget\n    mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, mytaglist.buttons)\n\n    -- Create a tasklist widget\n    mytasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, mytasklist.buttons)\n\n    -- Create the wibox\n    mywibox[s] = awful.wibox({ position = \"top\", screen = s, height = 18 })\n\n    -- Widgets that are aligned to the upper left\n    local left_layout = wibox.layout.fixed.horizontal()\n    left_layout:add(spr)\n    left_layout:add(mytaglist[s])\n    left_layout:add(mypromptbox[s])\n    left_layout:add(spr)\n\n    -- Widgets that are aligned to the upper right\n    local right_layout_toggle = true\n    local function right_layout_add (...)  \n        local arg = {...}\n        if right_layout_toggle then\n            right_layout:add(arrl_ld)\n            for i, n in pairs(arg) do\n                right_layout:add(wibox.widget.background(n ,beautiful.bg_focus))\n            end\n        else\n            right_layout:add(arrl_dl)\n            for i, n in pairs(arg) do\n                right_layout:add(n)\n            end\n        end\n        right_layout_toggle = not right_layout_toggle\n    end\n    \n    right_layout = wibox.layout.fixed.horizontal()\n    if s == 1 then right_layout:add(wibox.widget.systray()) end\n    right_layout:add(spr)\n    right_layout:add(arrl)\n    right_layout_add(mpdicon, mpdwidget)\n    right_layout_add(volicon, volumewidget)\n    --right_layout_add(mailicon, mailwidget)\n    right_layout_add(memicon, memwidget)\n    right_layout_add(cpuicon, cpuwidget)\n    right_layout_add(tempicon, tempwidget)\n    right_layout_add(fsicon, fswidget)\n    right_layout_add(baticon, batwidget)\n    right_layout_add(neticon,netwidget)\n    right_layout_add(mytextclock, spr)\n    right_layout_add(mylayoutbox[s])\n\n    -- Now bring it all together (with the tasklist in the middle)\n    local layout = wibox.layout.align.horizontal()\n    layout:set_left(left_layout)\n    layout:set_middle(mytasklist[s])\n    layout:set_right(right_layout)\n    mywibox[s]:set_widget(layout)\n\nend\n-- }}}\n\n-- {{{ Mouse Bindings\nroot.buttons(awful.util.table.join(\n    awful.button({ }, 3, function () mymainmenu:toggle() end),\n    awful.button({ }, 4, awful.tag.viewnext),\n    awful.button({ }, 5, awful.tag.viewprev)\n))\n-- }}}\n\n-- {{{ Key bindings\nglobalkeys = awful.util.table.join(\n    -- Take a screenshot\n    -- https://github.com/copycat-killer/dots/blob/master/bin/screenshot\n    awful.key({ altkey }, \"p\", function() os.execute(\"screenshot\") end),\n\n    -- Tag browsing\n    awful.key({ modkey }, \"Left\",   awful.tag.viewprev       ),\n    awful.key({ modkey }, \"Right\",  awful.tag.viewnext       ),\n    awful.key({ modkey }, \"Escape\", awful.tag.history.restore),\n\n    -- Non-empty tag browsing\n    awful.key({ altkey }, \"Left\", function () lain.util.tag_view_nonempty(-1) end),\n    awful.key({ altkey }, \"Right\", function () lain.util.tag_view_nonempty(1) end),\n\n    -- Default client focus\n    awful.key({ altkey }, \"k\",\n        function ()\n            awful.client.focus.byidx( 1)\n            if client.focus then client.focus:raise() end\n        end),\n    awful.key({ altkey }, \"j\",\n        function ()\n            awful.client.focus.byidx(-1)\n            if client.focus then client.focus:raise() end\n        end),\n\n    -- By direction client focus\n    awful.key({ modkey }, \"j\",\n        function()\n            awful.client.focus.bydirection(\"down\")\n            if client.focus then client.focus:raise() end\n        end),\n    awful.key({ modkey }, \"k\",\n        function()\n            awful.client.focus.bydirection(\"up\")\n            if client.focus then client.focus:raise() end\n        end),\n    awful.key({ modkey }, \"h\",\n        function()\n            awful.client.focus.bydirection(\"left\")\n            if client.focus then client.focus:raise() end\n        end),\n    awful.key({ modkey }, \"l\",\n        function()\n            awful.client.focus.bydirection(\"right\")\n            if client.focus then client.focus:raise() end\n        end),\n\n    -- Show Menu\n    awful.key({ modkey }, \"w\",\n        function ()\n            mymainmenu:show({ keygrabber = true })\n        end),\n\n    -- Show/Hide Wibox\n    awful.key({ modkey }, \"b\", function ()\n        mywibox[mouse.screen].visible = not mywibox[mouse.screen].visible\n    end),\n\n    -- Layout manipulation\n    awful.key({ modkey, \"Shift\"   }, \"j\", function () awful.client.swap.byidx(  1)    end),\n    awful.key({ modkey, \"Shift\"   }, \"k\", function () awful.client.swap.byidx( -1)    end),\n    awful.key({ modkey, \"Control\" }, \"j\", function () awful.screen.focus_relative( 1) end),\n    awful.key({ modkey, \"Control\" }, \"k\", function () awful.screen.focus_relative(-1) end),\n    awful.key({ modkey,           }, \"u\", awful.client.urgent.jumpto),\n    awful.key({ modkey,           }, \"Tab\",\n        function ()\n            awful.client.focus.history.previous()\n            if client.focus then\n                client.focus:raise()\n            end\n        end),\n    awful.key({ altkey, \"Shift\"   }, \"l\",      function () awful.tag.incmwfact( 0.05)     end),\n    awful.key({ altkey, \"Shift\"   }, \"h\",      function () awful.tag.incmwfact(-0.05)     end),\n    awful.key({ modkey, \"Shift\"   }, \"l\",      function () awful.tag.incnmaster(-1)       end),\n    awful.key({ modkey, \"Shift\"   }, \"h\",      function () awful.tag.incnmaster( 1)       end),\n    awful.key({ modkey, \"Control\" }, \"l\",      function () awful.tag.incncol(-1)          end),\n    awful.key({ modkey, \"Control\" }, \"h\",      function () awful.tag.incncol( 1)          end),\n    awful.key({ modkey,           }, \"space\",  function () awful.layout.inc(layouts,  1)  end),\n    awful.key({ modkey, \"Shift\"   }, \"space\",  function () awful.layout.inc(layouts, -1)  end),\n    awful.key({ modkey, \"Control\" }, \"n\",      awful.client.restore),\n\n    -- Standard program\n    awful.key({ modkey,           }, \"Return\", function () awful.util.spawn(terminal) end),\n    awful.key({ modkey, \"Control\" }, \"r\",      awesome.restart),\n    awful.key({ modkey, \"Shift\"   }, \"q\",      awesome.quit),\n\n    -- Dropdown terminal\n    awful.key({ modkey,	          }, \"z\",      function () drop(terminal) end),\n\n    -- Widgets popups\n    awful.key({ altkey,           }, \"c\",      function () lain.widgets.calendar:show(7) end),\n    awful.key({ altkey,           }, \"h\",      function () fswidget.show(7) end),\n\n    -- ALSA volume control\n    awful.key({ altkey }, \"Up\",\n        function ()\n            awful.util.spawn(string.format(\"amixer -c %s set %s 1+\", volumewidget.card, volumewidget.channel))\n            volumewidget.update()\n        end),\n    awful.key({ altkey }, \"Down\",\n        function ()\n            awful.util.spawn(string.format(\"amixer -c %s set %s 1-\", volumewidget.card, volumewidget.channel))\n            volumewidget.update()\n        end),\n    awful.key({ altkey }, \"m\",\n        function ()\n            awful.util.spawn(string.format(\"amixer -c %s set %s toggle\", volumewidget.card, volumewidget.channel))\n            --awful.util.spawn(string.format(\"amixer set %s toggle\", volumewidget.channel))\n            volumewidget.update()\n        end),\n    awful.key({ altkey, \"Control\" }, \"m\",\n        function ()\n            awful.util.spawn(string.format(\"amixer -c %s set %s 100%%\", volumewidget.card, volumewidget.channel))\n            volumewidget.update()\n        end),\n\n    -- MPD control\n    awful.key({ altkey, \"Control\" }, \"Up\",\n        function ()\n            awful.util.spawn_with_shell(\"mpc toggle || ncmpc toggle || pms toggle\")\n            mpdwidget.update()\n        end),\n    awful.key({ altkey, \"Control\" }, \"Down\",\n        function ()\n            awful.util.spawn_with_shell(\"mpc stop || ncmpc stop || pms stop\")\n            mpdwidget.update()\n        end),\n    awful.key({ altkey, \"Control\" }, \"Left\",\n        function ()\n            awful.util.spawn_with_shell(\"mpc prev || ncmpc prev || pms prev\")\n            mpdwidget.update()\n        end),\n    awful.key({ altkey, \"Control\" }, \"Right\",\n        function ()\n            awful.util.spawn_with_shell(\"mpc next || ncmpc next || pms next\")\n            mpdwidget.update()\n        end),\n\n    -- Copy to clipboard\n    awful.key({ modkey }, \"c\", function () os.execute(\"xsel -p -o | xsel -i -b\") end),\n\n    -- User programs\n    awful.key({ modkey }, \"q\", function () awful.util.spawn(browser) end),\n    awful.key({ modkey }, \"i\", function () awful.util.spawn(browser2) end),\n    awful.key({ modkey }, \"s\", function () awful.util.spawn(gui_editor) end),\n    awful.key({ modkey }, \"g\", function () awful.util.spawn(graphics) end),\n\n    -- Prompt\n    awful.key({ modkey }, \"r\", function () mypromptbox[mouse.screen]:run() end),\n    awful.key({ modkey }, \"x\",\n              function ()\n                  awful.prompt.run({ prompt = \"Run Lua code: \" },\n                  mypromptbox[mouse.screen].widget,\n                  awful.util.eval, nil,\n                  awful.util.getdir(\"cache\") .. \"/history_eval\")\n              end)\n)\n\nclientkeys = awful.util.table.join(\n    awful.key({ modkey,           }, \"f\",      function (c) c.fullscreen = not c.fullscreen  end),\n    awful.key({ modkey, \"Shift\"   }, \"c\",      function (c) c:kill()                         end),\n    awful.key({ modkey, \"Control\" }, \"space\",  awful.client.floating.toggle                     ),\n    awful.key({ modkey, \"Control\" }, \"Return\", function (c) c:swap(awful.client.getmaster()) end),\n    awful.key({ modkey,           }, \"o\",      awful.client.movetoscreen                        ),\n    awful.key({ modkey,           }, \"t\",      function (c) c.ontop = not c.ontop            end),\n    awful.key({ modkey,           }, \"n\",\n        function (c)\n            -- The client currently has the input focus, so it cannot be\n            -- minimized, since minimized clients can't have the focus.\n            c.minimized = true\n        end),\n    awful.key({ modkey,           }, \"m\",\n        function (c)\n            c.maximized_horizontal = not c.maximized_horizontal\n            c.maximized_vertical   = not c.maximized_vertical\n        end)\n)\n\n-- Bind all key numbers to tags.\n-- Be careful: we use keycodes to make it works on any keyboard layout.\n-- This should map on the top row of your keyboard, usually 1 to 9.\nfor i = 1, 9 do\n    globalkeys = awful.util.table.join(globalkeys,\n        awful.key({ modkey }, \"#\" .. i + 9,\n                  function ()\n                        local screen = mouse.screen\n                        local tag = awful.tag.gettags(screen)[i]\n                        if tag then\n                           awful.tag.viewonly(tag)\n                        end\n                  end),\n        awful.key({ modkey, \"Control\" }, \"#\" .. i + 9,\n                  function ()\n                      local screen = mouse.screen\n                      local tag = awful.tag.gettags(screen)[i]\n                      if tag then\n                         awful.tag.viewtoggle(tag)\n                      end\n                  end),\n        awful.key({ modkey, \"Shift\" }, \"#\" .. i + 9,\n                  function ()\n                      local tag = awful.tag.gettags(client.focus.screen)[i]\n                      if client.focus and tag then\n                          awful.client.movetotag(tag)\n                     end\n                  end),\n        awful.key({ modkey, \"Control\", \"Shift\" }, \"#\" .. i + 9,\n                  function ()\n                      local tag = awful.tag.gettags(client.focus.screen)[i]\n                      if client.focus and tag then\n                          awful.client.toggletag(tag)\n                      end\n                  end))\nend\n\nclientbuttons = awful.util.table.join(\n    awful.button({ }, 1, function (c) client.focus = c; c:raise() end),\n    awful.button({ modkey }, 1, awful.mouse.client.move),\n    awful.button({ modkey }, 3, awful.mouse.client.resize))\n\n-- Set keys\nroot.keys(globalkeys)\n-- }}}\n\n-- {{{ Rules\nawful.rules.rules = {\n    -- All clients will match this rule.\n    { rule = { },\n      properties = { border_width = beautiful.border_width,\n                     border_color = beautiful.border_normal,\n                     focus = awful.client.focus.filter,\n                     keys = clientkeys,\n                     buttons = clientbuttons,\n	                   size_hints_honor = false } },\n    { rule = { class = \"URxvt\" },\n          properties = { opacity = 0.99 } },\n\n    { rule = { class = \"MPlayer\" },\n          properties = { floating = true } },\n\n    { rule = { class = \"Dwb\" },\n          properties = { tag = tags[1][1] } },\n\n    { rule = { class = \"Iron\" },\n          properties = { tag = tags[1][1] } },\n\n    { rule = { instance = \"plugin-container\" },\n          properties = { tag = tags[1][1] } },\n\n	  { rule = { class = \"Gimp\" },\n     	    properties = { tag = tags[1][4] } },\n\n    { rule = { class = \"Gimp\", role = \"gimp-image-window\" },\n          properties = { maximized_horizontal = true,\n                         maximized_vertical = true } },\n\n--	  { rule = { class = \"feh\" },\n--     	    properties = { floating = true } },\n}\n-- }}}\n\n-- {{{ Signals\n-- signal function to execute when a new client appears.\nclient.connect_signal(\"manage\", function (c, startup)\n    -- enable sloppy focus\n    c:connect_signal(\"mouse::enter\", function(c)\n        if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier\n            and awful.client.focus.filter(c) then\n            client.focus = c\n        end\n    end)\n\n    if not startup and not c.size_hints.user_position\n       and not c.size_hints.program_position then\n        awful.placement.no_overlap(c)\n        awful.placement.no_offscreen(c)\n    end\n\n    local titlebars_enabled = false\n    if titlebars_enabled and (c.type == \"normal\" or c.type == \"dialog\") then\n        -- buttons for the titlebar\n        local buttons = awful.util.table.join(\n                awful.button({ }, 1, function()\n                    client.focus = c\n                    c:raise()\n                    awful.mouse.client.move(c)\n                end),\n                awful.button({ }, 3, function()\n                    client.focus = c\n                    c:raise()\n                    awful.mouse.client.resize(c)\n                end)\n                )\n\n        -- widgets that are aligned to the right\n        local right_layout = wibox.layout.fixed.horizontal()\n        right_layout:add(awful.titlebar.widget.floatingbutton(c))\n        right_layout:add(awful.titlebar.widget.maximizedbutton(c))\n        right_layout:add(awful.titlebar.widget.stickybutton(c))\n        right_layout:add(awful.titlebar.widget.ontopbutton(c))\n        right_layout:add(awful.titlebar.widget.closebutton(c))\n\n        -- the title goes in the middle\n        local middle_layout = wibox.layout.flex.horizontal()\n        local title = awful.titlebar.widget.titlewidget(c)\n        title:set_align(\"center\")\n        middle_layout:add(title)\n        middle_layout:buttons(buttons)\n\n        -- now bring it all together\n        local layout = wibox.layout.align.horizontal()\n        layout:set_right(right_layout)\n        layout:set_middle(middle_layout)\n\n        awful.titlebar(c,{size=16}):set_widget(layout)\n    end\nend)\n\n-- No border for maximized clients\nclient.connect_signal(\"focus\",\n    function(c)\n        if c.maximized_horizontal == true and c.maximized_vertical == true then\n            c.border_color = beautiful.border_normal\n        else\n            c.border_color = beautiful.border_focus\n        end\n    end)\nclient.connect_signal(\"unfocus\", function(c) c.border_color = beautiful.border_normal end)\n-- }}}\n\n-- {{{ Arrange signal handler\nfor s = 1, screen.count() do screen[s]:connect_signal(\"arrange\", function ()\n        local clients = awful.client.visible(s)\n        local layout  = awful.layout.getname(awful.layout.get(s))\n\n        if #clients > 0 then -- Fine grained borders and floaters control\n            for _, c in pairs(clients) do -- Floaters always have borders\n                if awful.client.floating.get(c) or layout == \"floating\" then\n                    c.border_width = beautiful.border_width\n\n                -- No borders with only one visible client\n                elseif #clients == 1 or layout == \"max\" then\n                    clients[1].border_width = 0\n                else\n                    c.border_width = beautiful.border_width\n                end\n            end\n        end\n      end)\nend\n-- }}}\n",
+					"file": "/home/ether/.config/awesome/rc.lua",
+					"file_size": 27137,
+					"file_write_time": 1427030552000000,
+					"settings":
+					{
+						"buffer_size": 26989,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/ether/.zshrc",
+					"settings":
+					{
+						"buffer_size": 2728,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+			],
+			"find":
+			{
+				"height": 0.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 3,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"settings":
+							{
+								"buffer_size": 0,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"auto_name": "",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/home/ether/Docs/zsh.rc.exemple",
+							"settings":
+							{
+								"buffer_size": 23552,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										14753,
+										14753
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 6149.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/home/ether/.config/awesome/rc.lua",
+							"settings":
+							{
+								"buffer_size": 26989,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1683,
+										1683
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Lua/Lua.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 223.0,
+								"translation.y": 735.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/home/ether/.zshrc",
+							"settings":
+							{
+								"buffer_size": 2728,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										123,
+										123
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"position": "0,0,0,0,0,711,33,1395,780,1360,768",
+			"replace":
+			{
+				"height": 0.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"window_id": 1,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}

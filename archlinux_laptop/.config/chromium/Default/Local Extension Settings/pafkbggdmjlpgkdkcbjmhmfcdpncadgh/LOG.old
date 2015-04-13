@@ -1,0 +1,12 @@
+2015/03/22-00:07:18.712 21738 Reusing MANIFEST /home/ether/.config/chromium/Default/Local Extension Settings/pafkbggdmjlpgkdkcbjmhmfcdpncadgh/MANIFEST-000001
+2015/03/22-00:07:18.717 21738 Recovering log #13
+2015/03/22-00:07:18.717 21738 Level-0 table #15: started
+2015/03/22-00:07:18.719 21738 Level-0 table #15: 172 bytes OK
+2015/03/22-00:07:18.750 21738 Delete type=0 #13
+2015/03/22-00:07:18.760 21806 Compacting 4@0 + 0@1 files
+2015/03/22-00:07:18.761 21806 Compacted 4@0 + 0@1 files => 0 bytes
+2015/03/22-00:07:18.775 21806 compacted to: files[ 0 1 0 0 0 0 0 ]
+2015/03/22-00:07:18.775 21806 Delete type=2 #12
+2015/03/22-00:07:18.775 21806 Delete type=2 #6
+2015/03/22-00:07:18.775 21806 Delete type=2 #15
+2015/03/22-00:07:18.775 21806 Delete type=2 #9
