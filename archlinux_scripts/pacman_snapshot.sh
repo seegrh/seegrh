@@ -1,7 +1,7 @@
 #!/bin/bash
 SNAP_NAME='snaptmp'
 SNAP_SIZE='1G'
-LV_CURRENT=`df / | grep /$ | sed -e 's/ .* //g'`
+LV_CURRENT=`df / | grep /$ | sed -e 's/ .*//g'`
 VG_CURRENT=`lvs $LV_CURRENT -o vg_name --noheading | sed -e 's/.* //g'`
 
 #a definir en temp qu alias de pacman
