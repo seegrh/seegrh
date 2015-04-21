@@ -6,7 +6,7 @@ LOG_PATH=''
 
 #echo -e "pwd `pwd`\nfilename $FILENAME\nnote_path $NOTE_PATH\nnote_name $NOTE_NAME"
 
-gnsync --path $NOTE_PATH --mask $NOTE_NAME 
+gnsync --path $NOTE_PATH --mask $NOTE_NAME $2 $3 
 #--logpath $LOG_PATH
 
 
