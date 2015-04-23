@@ -47,7 +47,7 @@ if [[ $1 =~ .*-.*u.* ]]; then
 				fi
 				#creation de l'entree grub
 				echo -e "####PREPARATION DE GRUB####"
-				if ! grep -riq $SNAP_NAME/etc/grub.d/40_custom ; then
+				if ! grep -riq $SNAP_NAME /etc/grub.d/40_custom ; then
 					echo -e "####CREATION D UNE ENTREE GRUB\n"
 					echo -e "menuentry '$SNAP_NAME' --class arch --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-simple-/dev/mapper/$VG_CURRENT-$SNAP_NAME' {
 		load_video
