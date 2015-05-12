@@ -36,28 +36,29 @@ if [[ $1 =~ .*-.*u.* ]]; then
 		case "$delsnapshot" in
 				o|O)
 				#si oui on le supprime 
-				echo -e "############ SUPPRESSION DU SNAPSHOT ############"
+				echo -e "\n############ SUPPRESSION DU SNAPSHOT ############"
 				if echo "y" | lvremove /dev/$VG_CURRENT/$SNAP_NAME 2>/dev/null; then
 				#suppression de l'entree grub
-					echo -e "############## MISE A JOUR DE GRUB ##############"
-					echo "Suppression de l entree Grub"
+					echo -e "\n############## MISE A JOUR DE GRUB ##############"
+					echo "Suppression de l'entree Grub"
 					sed -i '/'"$SNAP_GRUBMENU_NAME"'/,+10d' /etc/grub.d/40_custom
 				else
-					echo "Erreur"
+					echo "Suppression de l'entree Grub"
+					echo "Command failed"
 					exit 1
 				fi
 				#creation du snapshot
-		echo -e "############## CREATION DU SNAPSHOT ##############"
+		echo -e "\n############## CREATION DU SNAPSHOT ##############"
 				if lvcreate --snapshot --name $SNAP_NAME --size $SNAP_SIZE $LV_CURRENT ; then
-					echo "done"
+					echo -e "\nSNAPSHOT OK\n"
 				else
-					echo "Erreur"
+					echo "Command failed"
 					exit 1
 				fi
 				#creation de l'entree grub
-				echo -e "############## PREPARATION DE GRUB ##############"
+				echo -e "\n############## PREPARATION DE GRUB ##############"
 				if ! grep -riq '$SNAP_GRUBMENU_NAME' /etc/grub.d/40_custom ; then
-					echo -e "Creation de l entree Grub"
+					echo -e "####CREATION D UNE ENTREE GRUB\n"
 					echo -e "menuentry '$SNAP_GRUBMENU_NAME' --class arch --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-simple-/dev/mapper/$VG_CURRENT-$SNAP_NAME' {
 		load_video
 		set gfxpayload=keep
@@ -71,13 +72,12 @@ if [[ $1 =~ .*-.*u.* ]]; then
 }" >>/etc/grub.d/40_custom
 				fi
 				#update de grub
-				echo -e "############## MISE A JOUR DE GRUB ##############"
+				echo -e "\n############## MISE A JOUR DE GRUB ##############"
 				grub-mkconfig -o /boot/grub/grub.cfg
 		#verification que tout que le snapshot est bien cree
-		#si il y a une erreur on de le notifie et demande confirmation pour continuer
-		echo -e "##################################################\n"	
+		#si il y a une erreur on de le notifie et demande confirmation pour continuer	
 		;;
-				*) echo "########### MISE A JOUR SANS SNAPSHOT ############" 
+				*) echo "\n########### MISE A JOUR SANS SNAPSHOT ############" 
 		;;
 		esac
 		else
@@ -87,17 +87,17 @@ if [[ $1 =~ .*-.*u.* ]]; then
 				o|O)
 				#si oui on le cree
 				#creation du snapshot
-				echo -e "############## CREATION DU SNAPSHOT ##############"
+				echo -e "\n############## CREATION DU SNAPSHOT ##############"
 				if lvcreate --snapshot --name $SNAP_NAME --size $SNAP_SIZE $LV_CURRENT ; then
-					echo "done"
+					echo -e "\nSNAPSHOT OK\n"
 				else
-					echo "Erreur"
+					echo "Command failed"
 					exit 1
 				fi
 				#creation de l'entree grub
-				echo -e "############## PREPARATION DE GRUB ##############"
+				echo -e "\n############## PREPARATION DE GRUB ##############"
 				if ! grep -riq '$SNAP_GRUBMENU_NAME' /etc/grub.d/40_custom ; then
-					echo -e "Creation de l entree Grub"
+					echo -e "####CREATION D UNE ENTREE GRUB\n"
 					echo -e "menuentry '$SNAP_GRUBMENU_NAME' --class arch --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-simple-/dev/mapper/$VG_CURRENT-$SNAP_NAME' {
 		load_video
 		set gfxpayload=keep
@@ -111,11 +111,10 @@ if [[ $1 =~ .*-.*u.* ]]; then
 }" >>/etc/grub.d/40_custom
 				fi
 				#update de grub
-				echo -e "############## MISE A JOUR DE GRUB ##############"
+				echo -e "\n############## MISE A JOUR DE GRUB ##############"
 				grub-mkconfig -o /boot/grub/grub.cfg
 				#verification que tout que le snapshot est bien cree
 				#si il y a une erreur on de le notifie et demande confirmation pour continuer
-				echo -e "##################################################\n"
 			;;
 				*)
 			;;
